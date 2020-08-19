@@ -1,6 +1,6 @@
 const express = require("express")
 
-const { getbootCamps,postbootCamp,getbootCamp,updatebootCamp,deletebootCamp,getbootcampsInRadius, uploadBootcampPhoto } = require("../controller/bootcamp")
+const { getbootCamps,postbootCamp,getbootCamp,updatebootCamp,deletebootCamp,getbootcampsInRadius, uploadBootcampPhoto } = require("../controller/bootCamp")
 const { protect, authorize } = require("../middleware/auth")
 
 //Include other resourse router
