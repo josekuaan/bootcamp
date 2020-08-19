@@ -8,7 +8,7 @@ const {
   deletebootCamp,
   getbootcampsInRadius,
   uploadBootcampPhoto,
-} = require("./controller/bootcamp.js");
+} = require("../controller/auth");
 const { protect, authorize } = require("../middleware/auth.js");
 
 //Include other resourse router
