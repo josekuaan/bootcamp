@@ -8,8 +8,8 @@ const {
   deletebootCamp,
   getbootcampsInRadius,
   uploadBootcampPhoto,
-} = require("../controller/bootcamp");
-const { protect, authorize } = require("../middleware/auth");
+} = require("../controller/bootcamp.js");
+const { protect, authorize } = require("../middleware/auth.js");
 
 //Include other resourse router
 const courseRouter = require("./courses");
