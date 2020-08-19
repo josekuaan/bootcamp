@@ -13,7 +13,7 @@ if(process.env.NODE_ENV === "development"){
   
      
 const connectDB = async () =>{
-   const conn = await mongoose.connect(url, {
+   const conn = await mongoose.connect( "mongodb://localhost:27017/devcamper2", {
         useNewUrlParser:true,
         useCreateIndex:true,
         useFindAndModify:false,

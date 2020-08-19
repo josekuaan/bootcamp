@@ -53,7 +53,7 @@ app.use(hpp())
 // middlewares
 if(process.env.NODE_ENV === "development") app.use(morgan("dev"))
  
- 
+ console.log(process.env.NODE_ENV)
 // File Upload
 app.use(express.static(path.join(__dirname,'public')))
 app.use(fileupload())
