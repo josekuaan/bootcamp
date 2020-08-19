@@ -3,12 +3,17 @@ const dotenv = require("dotenv");
 
 dotenv.config({ path:"../config/config.env" });
 
+let url;
+if(process.env.NODE_ENV === "development"){
+    url = "mongodb://localhost:27017/devcamper2"
+}else{
+   url=process.env.MONGODB_URI
+}
 
-
-const url = "mongodb://localhost:27017/devcamper2";
+  
      
 const connectDB = async () =>{
-   const conn = await mongoose.connect(process.env.URL, {
+   const conn = await mongoose.connect(url, {
         useNewUrlParser:true,
         useCreateIndex:true,
         useFindAndModify:false,
