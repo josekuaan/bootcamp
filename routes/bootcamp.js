@@ -8,7 +8,7 @@ const {
   deletebootCamp,
   getbootcampsInRadius,
   uploadBootcampPhoto,
-} = require("../controller/auth");
+} = require("../controller/bootcamp");
 const { protect, authorize } = require("../middleware/auth.js");
 
 //Include other resourse router
@@ -21,11 +21,11 @@ Router.use("/:bootcampId/courses", courseRouter);
 Router.use("/:bootcampId/reviews", reviewRouter);
 
 //Route for photo upload
-// Router.route("/:id/photo").put(
-//   protect,
-//   authorize("admin", "publisher"),
-//   uploadBootcampPhoto
-// );
+Router.route("/:id/photo").put(
+  protect,
+  authorize("admin", "publisher"),
+  uploadBootcampPhoto
+);
 
 //Router to bootcamp controller
 Router.route("/radius/:zipcode/:distance").get(getbootcampsInRadius);
