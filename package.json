@@ -1,5 +1,8 @@
 {
   "name": "bootcamp",
+  "engines": {
+    "node": "12.13.1"
+  },
   "version": "1.0.0",
   "description": "boot camp Api",
   "main": "server.js",
@@ -30,8 +33,5 @@
     "nodemon": "^2.0.4",
     "slugify": "^1.4.2",
     "xss-clean": "^0.1.1"
-  },
-  "engines": {
-    "node": "12.13.1"
   }
 }
